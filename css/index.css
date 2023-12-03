@@ -165,9 +165,18 @@ body {
 #about {
   text-align: center;
   padding: 5vw;
+
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .me h1 {
   text-transform: uppercase;
+}
+.me p {
+  font-size: 20px;
 }
 
 .myskills {
