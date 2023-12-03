@@ -363,9 +363,14 @@ body {
   justify-content: center;
 }
 .footer-left {
-  width: 30%;
+  width: 50%;
 }
 .footer-right {
-  width: 80%;
-  align-self: end;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.footer-right h2 {
+  padding-inline: 50px;
 }
