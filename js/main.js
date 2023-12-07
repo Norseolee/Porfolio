@@ -72,4 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "auto";
     }
   });
+
+  // DISABLE PROJECTS ON THE PROGRESS
+  let disablewebsite = document.querySelector(".button-disable");
+  disablewebsite.addEventListener("click", function () {
+    alert(
+      "This website is still under development, but feel free to check out the code. Sorry for inconvenience"
+    );
+  });
 });

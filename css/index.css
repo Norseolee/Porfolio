@@ -162,6 +162,7 @@ body {
   transform: scale(1.35);
 }
 /* about */
+
 #about {
   text-align: center;
   padding: 5vw;
@@ -373,4 +374,26 @@ body {
 }
 .footer-right h2 {
   padding-inline: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  #about {
+    height: 1000px;
+  }
+  .projects {
+    flex-wrap: wrap;
+  }
+  .content {
+    inset: 0;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-project {
+    width: 90%;
+  }
+  .image-project {
+    width: 100%;
+  }
 }
