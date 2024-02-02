@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // NAVBAR TOGGLE
-  let menu = document.querySelector(".menu-toggle");
+  let menu = document.querySelector(".logo");
   menu.addEventListener("click", function (event) {
     document.body.classList.toggle("menu-open");
   });
@@ -8,27 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // X AND BARS CHANGE
   menu.addEventListener("click", function () {
     let mainNavigation = document.querySelector("#main-nav-wrap");
-
-    if (menu.classList.contains("fa-bars")) {
-      menu.classList.remove("fa-bars");
-      menu.classList.add("fa-x");
+    let menuToggle = document.querySelector(".menu-toggle");
+    if (menuToggle.classList.contains("fa-bars")) {
+      menuToggle.classList.remove("fa-bars");
+      menuToggle.classList.add("fa-x");
 
       mainNavigation.style.display = "block";
     } else {
-      menu.classList.add("fa-bars");
-      menu.classList.remove("fa-x");
+      menuToggle.classList.add("fa-bars");
+      menuToggle.classList.remove("fa-x");
       mainNavigation.style.display = "none";
     }
   });
 
   //   NAVIGATION
-  var navLinks = document.querySelectorAll(".main-navigation a");
+  let navLinks = document.querySelectorAll(".main-navigation a");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
       event.preventDefault();
 
-      var targetId = link.getAttribute("href").substring(1);
-      var targetSection = document.getElementById(targetId);
+      let targetId = link.getAttribute("href").substring(1);
+      let targetSection = document.getElementById(targetId);
 
       if (targetSection) {
         navLinks.forEach(function (navLink) {
