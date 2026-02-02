@@ -1,465 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norhajar Gabuya — Portfolio</title>
+    <!-- Bootstrap CSS (for carousel only) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- CSS  -->
-    <link rel="stylesheet" href="css/index.css" />
+    <!-- Bootstrap Bundle JS (for carousel only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-
-    <!-- FontAwesome kit -->
+    <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/057d5b898d.js"
-      crossorigin="anonymous"></script>
-
-    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
-    <title>Norhajar Gabuya Porfolio</title>
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!-- navbar black fixed -->
-    <div id="navbar">
-      <!-- Navbar -->
-      <div class="logo">
-        <!-- x and Portfolio fixed -->
-        <i class="menu-toggle fa-solid fa-bars"></i>
-        <span>Portfolio</span>
-      </div>
-      <nav id="main-nav-wrap">
-        <!-- drop-menu -->
-        <ul class="main-navigation">
-          <li class="current">
-            <a class="link" href="#intro" title="">Home</a>
-          </li>
-          <li><a class="link" href="#about" title="">About</a></li>
-          <li>
-            <a class="link" href="#portfolio" title="">Portfolio</a>
-          </li>
-          <li>
-            <a class="link" href="#contact" title="">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /top-bar -->
-    </div>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
 
-    <!-- hero -->
-    <div id="intro">
-      <div class="hero">
-        <p>Hey there!</p>
-        <h3>I'm Norhajar Gabuya</h3>
-        <p>| Full Stack Developer |</p>
-        <div class="socialmedia">
-          <div class="socialmediapicture">
-            <a href="https://www.facebook.com/norhajarguiamatgabuya/">
-              <img src="image/facebook.jpg" alt="Facebook" />
-            </a>
-          </div>
-          <a href="https://www.instagram.com/norhajar_gabuya/">
-            <div class="socialmediapicture">
-              <img src="image/instagram.jpg" alt="Instagram" /></div
-          ></a>
-          <div class="socialmediapicture">
-            <a href="https://linkedin.com/in/norhajar-gabuya">
-              <img src="image/linkedin.jpg" alt="LinkedIn" />
-            </a>
-          </div>
-          <div class="socialmediapicture">
-            <a href="https://wa.me/639973551321">
-              <img src="image/whatapp.jpg" alt="WhatsApp" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+    <div class="bg-blur"></div>
 
-    <!-- about -->
-    <div id="about">
-      <div class="me">
-        <h1>Get to know me!</h1>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <div class="logo">NG<span>•</span></div>
+
+        <nav id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="menu-btn" id="menuBtn">☰</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <h1>
+          Full-Stack<br />
+          <span>Web Developer</span>
+        </h1>
+        <p>Building scalable, clean, and modern web systems</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container reveal">
+        <h2>About Me</h2>
         <p>
-          As a Full-Stack Developer, I bring a dynamic skill set and a passion
-          for problem-solving to every project.
-          <br />
-          Known for adaptability and resourcefulness in fast-paced environments,
-          I thrive on continuous improvement. <br /><br />My approach combines a
-          quick learning ability with a keen eye for detail, ensuring innovative
-          and high-quality solutions. <br />I am actively seeking opportunities
-          to contribute, learn, and grow. Feel free to reach out for a
-          collaboration that aligns with my skills and passion.
+          I’m Norhajar, a Full-Stack Web Developer who enjoys turning ideas into
+          functional, user-friendly web applications. I’ve worked on real-world
+          projects like HR management systems and business websites, handling
+          both front-end and back-end development using React, Laravel, PHP, and
+          MySQL. I’m naturally curious, love researching new tools and
+          libraries, and I enjoy solving problems that improve the overall user
+          experience. I work well in team environments, adapt quickly, and take
+          pride in writing clean, maintainable code that actually makes an
+          impact.
         </p>
-        <div class="myCV">
-          <a href="#contact">
-            <button class="button-style">Contact me</button>
-          </a>
-          <a
-            href="file/Norhajar Guiamat Gabuya Resume.pdf"
-            class="button-style-two"
-            >Download CV</a
-          >
+        <a
+          href="file/NorhajarGabuya_Resume_2025.pdf"
+          class="btn btn-primary"
+          download
+        >
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section muted">
+      <div class="container reveal">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>HTML / CSS / JavaScript</span>
+          <span>React</span>
+          <span>PHP / Laravel / Livewire</span>
+          <span>SaaS</span>
+          <span>Node / Express</span>
+          <span>MySQL</span>
+          <span>REST APIs</span>
+          <span>jQuery</span>
+          <span>Git</span>
+          <span>Github</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- skill -->
-    <div id="skill">
-      <h1>My Skills</h1>
-      <div class="myskills">
-        <div class="front_end">
-          <h2>Front-End Tech</h2>
-          <p class="skill">HTML</p>
-          <p class="skill">CSS</p>
-          <p class="skill">JavaScript</p>
-          <p class="skill">React</p>
-          <p class="skill">SASS</p>
-          <p class="skill">Responsive Design</p>
-        </div>
-        <div class="back_end">
-          <h2>Back-End Tech</h2>
-          <p class="skill">GIT</p>
-          <p class="skill">Github</p>
-          <p class="skill">Express Basic</p>
-          <p class="skill">SQL Basics</p>
-          <p class="skill">PHP Laravel</p>
-          <p class="skill">jQuery</p>
-          <p class="skill">Node Js</p>
-          <p class="skill">Express</p>
-          <p class="skill">API</p>
-        </div>
-      </div>
-    </div>
+    <!-- PROJECTS GRID -->
+    <section id="projects" class="section">
+      <div class="container reveal">
+        <h2>Projects</h2>
 
-    <!-- projects -->
-
-    <div id="portfolio">
-      <h1>Projects</h1>
-
-      <div class="portfolio_projects">
-        <div class="projects">
-          <div class="image">
-            <img src="image/journey-trails.png" alt="Journey Trails Mockup" />
-            <div class="info">
-              <h1>Journel Trails</h1>
-              <button id="model-info" class="button-style-two">
-                Read More...
-              </button>
+        <div class="projects-grid">
+          <div class="project-card" data-project="journey">
+            <img src="image/projects/journey_trails.png" />
+            <div class="project-overlay">
+              <h3>Journey Trails</h3>
             </div>
           </div>
-        </div>
-        <div class="projects-content">
-          <i class="close-project fa-solid fa-x content-x"></i>
-          <div>
-            <h1>Journey Trails</h1>
-          </div>
-          <div class="information">
-            <div class="image-project">
-              <img
-                src="image/journey-trails.png"
-                alt="MockUp picture of Journey Trails Website"
-                class="image" />
-            </div>
-            <div class="info-project">
-              <div class="info-details">
-                <p>
-                  A travel and tours website showcasing my proficiency in
-                  frontend development and design.
-                  <br />
-                  Leveraging HTML and CSS exclusively, I crafted a fully
-                  responsive website.
-                  <br />
-                  This singular page project underscores my ability to create
-                  visually appealing and adaptable web interfaces.
-                </p>
-              </div>
-              <div class="tool-tip">
-                <p class="tech-style">HTML</p>
-                <p class="tech-style">CSS</p>
-                <p class="tech-style">Bootstrap</p>
-              </div>
-              <div class="project-link">
-                <a
-                  class="button-style"
-                  href="https://norseolee.github.io/Mini_project/"
-                  target="_blank"
-                  >Visit Website</a
-                >
-                <a
-                  class="button-style-two"
-                  href="https://github.com/Norseolee/Mini_project"
-                  target="_blank"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="projects">
-          <div class="image">
+
+          <div class="project-card" data-project="am9">
             <img
-              src="image/Am9CommercialElectricityBillingSystem.png"
-              alt="Journey Trails Mockup" />
-            <div class="info">
-              <h1>HrConnects</h1>
-              <button id="model-info" class="button-style-two">
-                Read More...
-              </button>
+              src="image/projects/Am9CommercialElectricityBillingSystem.png"
+            />
+            <div class="project-overlay">
+              <h3>AM9 Billing System</h3>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="hotel">
+            <img src="image/projects/hotel_del_luna.png" />
+            <div class="project-overlay">
+              <h3>Hotel De Luna</h3>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="hr">
+            <img src="image/projects/hr_connect.png" />
+            <div class="project-overlay">
+              <h3>HR Connect</h3>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="devorbit">
+            <img src="image/projects/devorbitstudio.jpg" />
+            <div class="project-overlay">
+              <h3>Dev Orbit Studio</h3>
             </div>
           </div>
         </div>
-        <div class="projects-content">
-          <i class="close-project fa-solid fa-x content-x"></i>
-          <div>
-            <h1>Am9 Comemrcial Electricity Billing System</h1>
-          </div>
-          <div class="information">
-            <div class="image-project">
-              <img
-                src="image/Am9CommercialElectricityBillingSystem.png"
-                alt="MockUp picture of Am9 Commercial Website"
-                class="image" />
-            </div>
-            <div class="info-project">
-              <div class="info-details">
-                <p>
-                  The Am9 Commercial Electricity Billing System is a robust web
-                  application designed as a conversion of Meralco, the Manila
-                  Electric Company, focusing on simplicity and efficiency in
-                  managing commercial electricity billing processes. Developed
-                  with simple front-end tech like HTML and CSS, and Using Node
-                  js and express for back-end, and database use is SQL.
-                </p>
-              </div>
-              <div class="tool-tip">
-                <p class="tech-style">HTML</p>
-                <p class="tech-style">CSS</p>
-                <p class="tech-style">Node Js</p>
-                <p class="tech-style">Javascript</p>
-                <p class="tech-style">Express</p>
-                <p class="tech-style">mySQL</p>
-                <p class="tech-style">API</p>
-              </div>
-              <div class="project-link">
-                <a
-                  href="https://am9-commercial.onrender.com"
-                  class="button-style button-disable"
-                  >Visit Website</a
-                >
-                <a
-                  class="button-style-two"
-                  href="https://github.com/Norseolee/Am9MeralcoConversion"
-                  target="_blank"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <!-- MODAL -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div id="modalTech" class="tech"></div>
+        <div class="modal-links">
+          <a id="modalLive" target="_blank">Visit Website</a>
+          <a id="modalCode" target="_blank">Source Code</a>
         </div>
-        <div class="projects">
-          <div class="image">
-            <img src="image/hotel-del-luna.png" alt="Journey Trails Mockup" />
-            <div class="info">
-              <h1>Hotel Del Luna</h1>
-              <button id="model-info" class="button-style-two">
-                Read More...
-              </button>
-            </div>
+
+        <!-- Bootstrap Carousel -->
+        <div
+          id="projectCarousel"
+          class="carousel slide mt-4"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" id="carouselInner">
+            <!-- Images inserted dynamically -->
           </div>
-        </div>
-        <div class="projects-content">
-          <i class="close-project fa-solid fa-x content-x"></i>
-          <div><h1>Hotel De Luna</h1></div>
-          <div class="information">
-            <div class="image-project">
-              <img
-                src="image/hotel-del-luna.png"
-                alt="MockUp picture of Hotel Del Luna Website"
-                class="image" />
-            </div>
-            <div class="info-project">
-              <div class="info-details">
-                <p>
-                  I had the privilege of being part of a 4-member team that
-                  built the Hotel De Luna website—a 5-star luxury hotel's online
-                  platform. This website, developed using HTML, CSS, and
-                  Javascript, is fully responsive and user-friendly. Our
-                  collaborative effort ensured its successful creation,
-                  showcasing our proficiency in web development. The Hotel De
-                  Luna website is a demonstration of our skills and teamwork.
-                </p>
-              </div>
-              <div class="tool-tip">
-                <p class="tech-style">HTML</p>
-                <p class="tech-style">CSS</p>
-                <p class="tech-style">Bootstrap</p>
-                <p class="tech-style">Javascript</p>
-                <p class="tech-style">Laravel</p>
-              </div>
-              <div class="project-link">
-                <a
-                  href="http://hdl-env.eba-pdfwrirp.ap-southeast-1.elasticbeanstalk.com/"
-                  class="button-style button-disable"
-                  >Visit Website</a
-                >
-                <a
-                  class="button-style-two"
-                  href="https://drive.google.com/drive/folders/1ypEul1q-mLHtEjiBrnowTrR7uHfR38ew?usp=drive_link"
-                  target="_blank"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="projects">
-          <div class="image">
-            <img src="image/HrconnectMockup.png" alt="Journey Trails Mockup" />
-            <div class="info">
-              <h1>HrConnects</h1>
-              <button id="model-info" class="button-style-two">
-                Read More...
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="projects-content">
-          <i class="close-project fa-solid fa-x content-x"></i>
-          <div>
-            <h1>HrConnects</h1>
-          </div>
-          <div class="information">
-            <div class="image-project">
-              <img
-                src="image/HrconnectMockup.png"
-                alt="MockUp picture of HrConnect Website"
-                class="image" />
-            </div>
-            <div class="info-project">
-              <div class="info-details">
-                <p>
-                  HR Connect stands as a dedicated HR Management Website,
-                  centering its functionality on PHP Laravel CRUD operations
-                  Create, Update, and Delete processes. This responsive
-                  platform, seamlessly integrated through HTML, CSS, JavaScript,
-                  and JavaScript Libraries (aos), showcases my proficiency in
-                  delivering a dynamic and user-friendly website.
-                  <br />
-                  Admin: Norseolee
-                  <br />
-                  Password: Pa$$w0rd!
-                </p>
-              </div>
-              <div class="tool-tip">
-                <p class="tech-style">HTML</p>
-                <p class="tech-style">CSS</p>
-                <p class="tech-style">Bootstrap</p>
-                <p class="tech-style">Javascript</p>
-                <p class="tech-style">PHP</p>
-                <p class="tech-style">Laravel</p>
-              </div>
-              <div class="project-link">
-                <a
-                  href="http://hrconnect.rf.gd/"
-                  class="button-style button-disable"
-                  >Visit Website</a
-                >
-                <a
-                  class="button-style-two"
-                  href="https://github.com/Aster255/HR-Connect"
-                  target="_blank"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#projectCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#projectCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- contact me -->
-    <div id="contact">
-      <div class="contact-title">
-        <h1>contact</h1>
-        <p>I'd love to hear from you</p>
-      </div>
-      <div class="form_section">
+    <!-- CONTACT -->
+    <section id="contact" class="section muted">
+      <div class="container reveal">
+        <h2>Contact</h2>
         <form
-          class="form"
+          class="contact-form"
           action="https://formspree.io/f/mpzggjeg"
-          method="POST">
-          <div>
-            <label for="name" class="label-style">Name</label>
-            <input type="text" id="name" name="name" class="input-style" />
-          </div>
-          <div>
-            <label for="email" class="label-style">Email</label>
-            <input type="email" name="email" id="email" class="input-style" />
-          </div>
-          <div>
-            <label for="message" class="label-style">Message</label>
-            <textarea
-              name="message"
-              type="text"
-              id="message"
-              class="input-style"
-              rows="5"
-              cols="5"
-              style="resize: none"></textarea>
-          </div>
-          <button class="button-style" type="submit">Submit</button>
+          method="POST"
+        >
+          <input name="name" placeholder="Name" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit">Send Message</button>
         </form>
       </div>
+    </section>
 
-      <div class="myinformaiton">
-        <i class="fa-regular fa-envelope"></i>
-        <p class="emailme">Email me at</p>
-        <p>hajarguiamatgabuya@yahoo.com</p>
-        <p>hajarguiamatgabuya@gmail.com</p>
-      </div>
-    </div>
+    <footer class="footer">© Norhajar Gabuya</footer>
 
-    <!-- footer -->
-    <div class="footer">
-      <div class="footer-content">
-        <div class="footer-left">
-          <h1>NORHAJAR GABUYA</h1>
-          <p>
-            Full-stack web Developer building Front-end and Back-end of websites
-            <br />
-            and web applications that lead to the success of the overall product
-          </p>
-        </div>
-
-        <div class="footer-right">
-          <h2>SOCIAL</h2>
-          <div class="socialmedia">
-            <div class="socialmediapicture">
-              <a href="https://www.facebook.com/norhajarguiamatgabuya/">
-                <img src="image/facebook.jpg" alt="Facebook" />
-              </a>
-            </div>
-            <a href="https://www.instagram.com/norhajar_gabuya/">
-              <div class="socialmediapicture">
-                <img src="image/instagram.jpg" alt="Instagram" /></div
-            ></a>
-            <div class="socialmediapicture">
-              <a href="www.linkedin.com/in/norhajar-gabuya">
-                <img src="image/linkedin.jpg" alt="LinkedIn" />
-              </a>
-            </div>
-            <div class="socialmediapicture">
-              <a href="https://wa.me/639973551321">
-                <img src="image/whatapp.jpg" alt="WhatsApp" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <hr />
-        <p>Copyright @ Norhajar Gabuya</p>
-      </div>
-    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
