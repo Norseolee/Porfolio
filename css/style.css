@@ -1,0 +1,260 @@
+:root {
+  --bg: #0b0e14;
+  --panel: rgba(18, 22, 34, 0.75);
+  --text: #e6e8ee;
+  --muted: #9aa0b4;
+  --accent: #6cf2ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: smooth;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+/* Background */
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Cursor */
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(12px);
+
+  background: rgba(11, 14, 20, 0.6);
+  z-index: 10;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo span {
+  color: var(--accent);
+}
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--muted);
+}
+nav a:hover {
+  color: var(--text);
+}
+.menu-btn {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+.hero span {
+  color: var(--accent);
+}
+.hero p {
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+/* SECTIONS */
+.section {
+  padding: 120px 20px;
+}
+.section.muted {
+  background: var(--panel);
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  margin-bottom: 30px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.skills-grid span {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.project-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+.modal-content {
+  max-width: 600px;
+  background: #0f1320;
+  margin: 8% auto;
+  padding: 40px;
+  border-radius: 20px;
+}
+.close {
+  float: right;
+  cursor: pointer;
+}
+.tech span {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.modal-links a {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 12px;
+  color: var(--accent);
+}
+
+/* CONTACT */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #0f1320;
+  border: none;
+  color: white;
+}
+.contact-form button {
+  padding: 14px 30px;
+  background: var(--accent);
+  border: none;
+  border-radius: 30px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    display: none;
+    background: #0f1320;
+    padding: 20px;
+    border-radius: 12px;
+    flex-direction: column;
+  }
+  nav.show {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
