@@ -91,6 +91,39 @@ const data = {
       "image/projects/devorbitstudio_6.jpg",
     ],
   },
+  rentalmanagerhub: {
+    title: "RentalManagerHub",
+    desc: `RentalManagerHub is the updated and improved version of the AM9 Commercial Billing System. 
+  Originally built for one company, it has now been upgraded into a multi-company rental and property management platform.
+
+  The system helps property owners, landlords, and rental businesses manage tenants, properties, rental billing, electricity billing, payments, reports, audit logs, and member accounts in one centralized system.
+
+  Demo Account:
+  Username: norhajar_gabuya
+  Password: password123`,
+    tech: [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Tailwind CSS",
+      "JavaScript",
+      "SaaS",
+      "Multi-company System",
+    ],
+    live: "https://rentalmanagerhub.devorbitstudio.com/member/login",
+    code: "#",
+    images: [
+      "image/projects/RentalManagerHub.png",
+      "image/projects/RentalManagerHub_2.png",
+      "image/projects/RentalManagerHub_Dashboard.png",
+      "image/projects/RentalManagerHub_Electricity.png",
+      "image/projects/RentalManagerHub_Member.png",
+      "image/projects/RentalManagerHub_myProfile.png",
+      "image/projects/RentalManagerHub_Payments.png",
+      "image/projects/RentalManagerHub_Properties.png",
+      "image/projects/RentalManagerHub_Reports.png",
+    ],
+  },
 };
 
 /* Modal logic */
@@ -112,11 +145,12 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
     // Populate carousel
     carouselInner.innerHTML = "";
-    const images = p.carousel_images || [];
+    const images = p.carousel_images || p.images || [];
+
     images.forEach((src, i) => {
       const div = document.createElement("div");
       div.className = "carousel-item" + (i === 0 ? " active" : "");
-      div.innerHTML = `<img src="${src}" class="d-block w-100 rounded" />`;
+      div.innerHTML = `<img src="${src}" class="d-block w-100 rounded" alt="${p.title}" />`;
       carouselInner.appendChild(div);
     });
 
